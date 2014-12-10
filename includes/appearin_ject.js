@@ -17,8 +17,8 @@ opera.isReady(function() {
 
 	// Inject button on appear.in
 	(function waitToInjectHandOffButton(){
-	   setTimeout(function(){
-	 		var container = document.querySelector(".right-aligned-button-group");
+		setTimeout(function(){
+			var container = document.querySelector(".right-aligned-button-group");
 
 			// Keep running until we can inject our UI
 			if (!container) {
@@ -47,12 +47,12 @@ opera.isReady(function() {
 
 		button.addEventListener('click', function(evt) {
 		  opera.extension.postMessage({
-        action: 'send_to_phone',
-        data: {
-          link: window.location.href,
-          title: window.document.title,
-          selection: null
-        }
+				action: 'send_to_phone',
+				data: {
+					link: window.location.href,
+					title: window.document.title,
+					selection: null
+				}
 		  });
 		}, false);
 
