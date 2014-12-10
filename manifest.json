@@ -1,0 +1,22 @@
+{
+  "name": "Appear.in Handoff",
+  "description": "Handoff your current Appear.in session from your desktop browser to your mobile browser on an Android device.",
+  "developer": {
+    "name": "richtr"
+  },
+  "manifest_version": 2,
+  "version": "0.9.0",
+  "background": {
+    "page": "index.html"
+  },
+  "content_scripts": [{
+    "js": ["includes/oauth_fix.js", "includes/000.operaextensions_injectedscript.min.js", "includes/appearin_ject.js"],
+    "matches": ["<all_urls>"],
+    "include_globs": ["http://*", "https://*"],
+    "exclude_globs": [],
+    "run_at": "document_start",
+    "all_frames": true
+  }],
+  "permissions": ["tabs", "https://*/*", "storage", "http://*/*"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'unsafe-eval';"
+}
