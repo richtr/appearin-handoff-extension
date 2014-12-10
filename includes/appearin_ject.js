@@ -1,8 +1,9 @@
 opera.isReady(function() {
 
 	var whitelistedUrlMatchers = [
-		/^(.*)?appear.in\/.*$/i
+		/^http[s]?:\/\/(.*\.)?appear.in\/.*$/i
 	];
+
 	var validUrlFound = false;
 
 	for (var i = 0; i < whitelistedUrlMatchers.length; i++) {

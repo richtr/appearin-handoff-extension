@@ -9,8 +9,6 @@ opera.isReady(function() {
   var STATUS_NO_TAB_ACCESS = window["STATUS_NO_TAB_ACCESS"] = 'no_tab_access';
   var STATUS_GENERAL_ERROR = window["STATUS_GENERAL_ERROR"] = 'general_error';
 
-  var channel = window["channel"];
-  var socket = window["socket"];
   var req = window["req"] = new XMLHttpRequest();
 
   function sendToPhone(data, listener) {
