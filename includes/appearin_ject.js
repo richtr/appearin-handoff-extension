@@ -7,13 +7,13 @@ opera.isReady(function() {
 	var validUrlFound = false;
 
 	for (var i = 0; i < whitelistedUrlMatchers.length; i++) {
-		if(window.location.href.match(whitelistedUrlMatchers[i]) != null) {
+		if (window.location.href.match(whitelistedUrlMatchers[i]) != null) {
 			validUrlFound = true;
 			break;
 		}
 	}
 
-	if(!validUrlFound) return;
+	if (!validUrlFound) return;
 
 	// Inject button on appear.in
 	(function waitToInjectHandOffButton(){

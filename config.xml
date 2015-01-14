@@ -1,8 +1,8 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" id="https://addons.opera.com/addons/extensions/details/appearin-handoff/" version="1.3.8">
-  <name>Appear.in Handoff</name>
-  <access origin="https://chrometophone.appspot.com"/>
-  <license>Copyright 2014 richtr MIT</license>
-  <author href="http://my.opera.com/richtr/blog/2010/12/13/opera-to-phone-extension-support-page">richtr</author>
-  <description xml:lang="en">Handoff your current Appear.in session from your desktop browser to your mobile browser on an Android device.</description>
+	<name>Appear.in Handoff</name>
+	<access origin="https://chrometophone.appspot.com"/>
+	<license>Copyright 2014 richtr MIT</license>
+	<author href="http://my.opera.com/richtr/blog/2010/12/13/opera-to-phone-extension-support-page">richtr</author>
+	<description xml:lang="en">Handoff your current Appear.in session from your desktop browser to your mobile browser on an Android device.</description>
 </widget>
