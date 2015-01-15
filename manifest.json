@@ -1,6 +1,6 @@
 {
 	"name": "Appear.in Handoff",
-	"description": "Hand-off your current Appear.in session from your desktop browser to your mobile browser on an Android device.",
+	"description": "Hand-off your current appear.in session from your desktop browser to your mobile browser on an Android device.",
 	"developer": {
 		"name": "richtr"
 	},
@@ -11,9 +11,9 @@
 	},
 	"content_scripts": [{
 		"js": [
-			"includes/oauth_fix.js",
-			"includes/000.operaextensions_injectedscript.min.js",
-			"includes/appearin_ject.js"
+			"js/oauth-fix.js",
+			"js/oex-injected.min.js",
+			"js/appearin-ject.js"
 		],
 		"matches": [
 			"<all_urls>"
