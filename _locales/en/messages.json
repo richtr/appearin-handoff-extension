@@ -15,7 +15,7 @@
 		"message": "Cannot access the current tab"
 	},
 	"errorSendingToPhone": {
-		"message": "Error sending to phone: "
+		"message": "Error sending to device: "
 	},
 	"signInToGoogle": {
 		"message": "You need to <a href=\"$1\" target=\"_o2pTab_ext\">sign in</a> with your Google account to enable Appear.in Handoff"
