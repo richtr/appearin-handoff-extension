@@ -1,18 +1,23 @@
 {
-	"name": "Appear.in Handoff",
-	"description": "Hand-off your current appear.in session from your desktop browser to your mobile browser on an Android device.",
-	"developer": {
-		"name": "richtr"
-	},
 	"manifest_version": 2,
+	"name": "Appear.in Handoff",
+	"default_locale": "en",
+	"description": "__MSG_extensionDescription__",
 	"version": "0.9.0",
-	"background": {
-		"page": "index.html"
-	},
+	"homepage_url": "https://github.com/operasoftware/appearin-handoff",
 	"icons": {
 		"16": "img/icon-16.png",
 		"48": "img/icon-48.png",
 		"128": "img/icon-128.png"
+	},
+	"permissions": [
+		"tabs",
+		"https://*/*",
+		"storage",
+		"http://*/*"
+	],
+	"background": {
+		"page": "index.html"
 	},
 	"content_scripts": [{
 		"js": [
@@ -31,11 +36,5 @@
 		"run_at": "document_start",
 		"all_frames": true
 	}],
-	"permissions": [
-		"tabs",
-		"https://*/*",
-		"storage",
-		"http://*/*"
-	],
 	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'unsafe-eval';"
 }
