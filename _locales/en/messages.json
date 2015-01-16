@@ -1,0 +1,23 @@
+{
+	"extensionDescription": {
+		"message": "Hand-off your current appear.in session from your desktop browser to your mobile browser on an Android device."
+	},
+	"buttonTitle": {
+		"message": "Handoff to mobile"
+	},
+	"sessionTranfered": {
+		"message": "Your session has been transferred to your mobile device :)"
+	},
+	"errorNotRegistered": {
+		"message": "Device not registered for user"
+	},
+	"errorCannotAccessTab": {
+		"message": "Cannot access the current tab"
+	},
+	"errorSendingToPhone": {
+		"message": "Error sending to phone: "
+	},
+	"signInToGoogle": {
+		"message": "You need to <a href=\"$1\" target=\"_o2pTab_ext\">sign in</a> with your Google account to enable Appear.in Handoff"
+	}
+}

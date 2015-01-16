@@ -18,7 +18,7 @@ opera.isReady(function() {
 	// Inject button on appear.in
 	(function waitToInjectHandOffButton(){
 		setTimeout(function(){
-			var container = document.querySelector(".right-aligned-button-group");
+			var container = document.querySelector('.right-aligned-button-group');
 
 			// Keep running until we can inject our UI
 			if (!container) {
@@ -60,24 +60,23 @@ opera.isReady(function() {
 			switch (message.data.action) {
 				case STATUS_SUCCESS:
 					// Exit appear.in room on Desktop browser
-					var signOutButton = document.querySelector(".fa-sign-out");
+					var signOutButton = document.querySelector('.fa-sign-out');
 					signOutButton.click();
 
 					(function changeThankYouMessage() {
 						setTimeout(function() {
-							var thanksEl = document.querySelector(".thank-you-message");
+							var thanksEl = document.querySelector('.thank-you-message');
 							if(thanksEl == null) {
 								changeThankYouMessage();
 								return;
 							}
-							var msg = document.querySelector(".thank-you-message .body");
-							msg.innerText = "Your session has been transferred to your mobile device :)";
+							var msg = document.querySelector('.thank-you-message .body');
+							msg.innerText = chrome.i18n.getMessage('sessionTranfered');
 						}, 50);
 					})()
 					break;
 				case STATUS_LOGIN_REQUIRED:
-					var signinLink = '<a href="' + signInUrl + '" target="_o2pTab_ext">sign in</a>';
-					showHandOffHelper("You need to " + signinLink + " with your Google account to enable Appear.in Handoff")
+					showHandOffHelper(chrome.i18n.getMessage('signInToGoogle', [signInUrl]))
 					break;
 				case STATUS_DEVICE_NOT_REGISTERED:
 					opera.extension.postMessage({
@@ -86,13 +85,13 @@ opera.isReady(function() {
 							url: 'http://code.google.com/p/chrometophone/wiki/AndroidApp'
 						}
 					});
-					showHandOffHelper("Device not registered for user")
+					showHandOffHelper(chrome.i18n.getMessage('errorNotRegistered'))
 					break;
 				case STATUS_NO_TAB_ACCESS:
-					showHandOffHelper("Cannot access the current tab")
+					showHandOffHelper(chrome.i18n.getMessage('errorCannotAccessTab'))
 					break;
 				case STATUS_GENERAL_ERROR:
-					showHandOffHelper("Error sending to phone: " + message.data.action)
+					showHandOffHelper(chrome.i18n.getMessage('errorSendingToPhone') + message.data.action)
 					break;
 			}
 		}, false);
@@ -101,34 +100,34 @@ opera.isReady(function() {
 	}
 
 	function createHandOffButton() {
-		var div = document.createElement("div");
-		div.setAttribute("class", "top-bar-button exit icon-only");
-		div.setAttribute("title", "Handoff to mobile");
+		var div = document.createElement('div');
+		div.setAttribute('class', 'top-bar-button exit icon-only');
+		div.setAttribute('title', chrome.i18n.getMessage('buttonTitle'));
 
-		var i = document.createElement("i");
-		i.setAttribute("class", "fa fa-mobile");
+		var i = document.createElement('i');
+		i.setAttribute('class', 'fa fa-mobile');
 
 		div.appendChild(i);
 		return div;
 	}
 
 	function showHandOffHelper(text) {
-		var container = document.querySelector(".in-room-notification");
-		var containerClass = container.getAttribute("class");
-		container.setAttribute("class", "in-room-notification ng-isolate-scope"); // remove 'ng-hide'
+		var container = document.querySelector('.in-room-notification');
+		var containerClass = container.getAttribute('class');
+		container.setAttribute('class', 'in-room-notification ng-isolate-scope'); // remove 'ng-hide'
 
-		var containerContent = container.querySelector(".content");
-		var containerContentClass = containerContent.getAttribute("class");
+		var containerContent = container.querySelector('.content');
+		var containerContentClass = containerContent.getAttribute('class');
 
-		var message = containerContent.querySelector(".message");
+		var message = containerContent.querySelector('.message');
 		message.innerHTML = text;
 
-		containerContent.setAttribute("class", containerContentClass + " visible");
+		containerContent.setAttribute('class', containerContentClass + ' visible');
 
 		// Reset and close notification visibility
 		setTimeout(function() {
-			container.setAttribute("class", containerClass);
-			containerContent.setAttribute("class", containerContentClass);
+			container.setAttribute('class', containerClass);
+			containerContent.setAttribute('class', containerContentClass);
 		}, 5000);
 	}
 
