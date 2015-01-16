@@ -1,0 +1,23 @@
+{
+	"extensionDescription": {
+		"message": "Передайте свой текущий разговор в appear.in из браузера на компьютере в мобильный браузер на Android."
+	},
+	"buttonTitle": {
+		"message": "Передать на мобильный"
+	},
+	"sessionTranfered": {
+		"message": "Ваш разговор был передан на мобильное устройство :)"
+	},
+	"errorNotRegistered": {
+		"message": "Устройство не зарегистрировано для пользователя"
+	},
+	"errorCannotAccessTab": {
+		"message": "Текущая вкладка недоступна"
+	},
+	"errorSendingToPhone": {
+		"message": "Ошибка при передаче на устройство: "
+	},
+	"signInToGoogle": {
+		"message": "<a href=\"$1\" target=\"_o2pTab_ext\">Войдите</a> в свой аккаунт Google для включения Appear.in Handoff"
+	}
+}
