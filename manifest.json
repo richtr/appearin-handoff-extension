@@ -22,7 +22,6 @@
 	"content_scripts": [{
 		"js": [
 			"js/oauth-fix.js",
-			"js/oex-injected.min.js",
 			"js/appearin-ject.js"
 		],
 		"matches": [
