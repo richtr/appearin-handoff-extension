@@ -2,6 +2,9 @@
 	"extensionDescription": {
 		"message": "Hand-off your current appear.in session from your desktop browser to your mobile browser on an Android device."
 	},
+	"extendedDescription": {
+		"message": "This extension allows to easily hand off an ongoing appear.in call to your mobile phone (Android only for now).\n\nThe first time, you’ll have to go through a setup wizard: just click the “Handoff to mobile” button in the top right corner of an ongoing call, and follow the steps.\n\nThe next time you want to use it, just click the “Handoff to mobile” button, and the call will immediately continue in your mobile browser of choice. Super handy for if you want to continue an ongoing call on the go!"
+	},
 	"buttonTitle": {
 		"message": "Handoff to mobile"
 	},
