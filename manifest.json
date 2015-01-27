@@ -19,22 +19,31 @@
 	"background": {
 		"page": "index.html"
 	},
-	"content_scripts": [{
-		"js": [
-			"js/oauth-fix.js",
-			"js/oex-injected.min.js",
-			"js/appearin-ject.js"
-		],
-		"matches": [
-			"<all_urls>"
-		],
-		"include_globs": [
-			"http://*",
-			"https://*"
-		],
-		"exclude_globs": [],
-		"run_at": "document_start",
-		"all_frames": true
-	}],
+	"content_scripts": [
+		{
+			"js": [
+				"js/oex-injected.min.js",
+				"js/oauth-fix.js"
+			],
+			"matches": [
+				"*://appengine.google.com/_ah/loginform*",
+				"*://code.google.com/p/chrometophone/logo*"
+			],
+			"run_at": "document_start",
+			"all_frames": true
+		},
+		{
+			"js": [
+				"js/oex-injected.min.js",
+				"js/appearin-ject.js"
+			],
+			"matches": [
+				"*://appear.in/*",
+				"*://*.appear.in/*"
+			],
+			"run_at": "document_start",
+			"all_frames": true
+		}
+	],
 	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'unsafe-eval';"
 }
